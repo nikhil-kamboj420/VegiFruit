@@ -1,37 +1,185 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
   font-size: 62.5%;
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!  Must Read !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* always use rem for font sizes, spacing, and layout dimensions to ensure scalability and responsiveness */
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+header {
+  background-color: #0b0844;
+  max-width: 100vw;
+  padding: 1rem;
+}
+
+header nav {
+  max-width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav img {
+  max-width: 10%;
+  max-height: 10%;
+  border-radius: 50%;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+header nav .btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: rgb(247, 189, 17);
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  header nav {
+    max-width: 90vw;
+  }
+
+  header nav .btn {
+    display: block;
+  }
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+}
+/*pages style*/
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.home {
+  background-color: #47799d; /* light blue */
+   padding: 20px;
+  font-size: 1.6rem;
+  min-height: 100vh;
+}
+
+.about {
+  background-color: #98425f; /* light pink */
+   padding: 20px;
+  font-size: 1.6rem;
+  min-height: 100vh;
+}
+
+.services {
+  background-color: #3c8f43; /* light green */
+   padding: 20px;
+  font-size: 1.6rem;
+  min-height: 100vh;
+}
+
+.contact {
+  background-color: #ae752a; /* light orange */
+   padding: 20px;
+  font-size: 1.6rem;
+  min-height: 100vh;
+}
+
+
+h1 {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin: 10px 0;
+}
+
+button {
+  padding: 8px 15px;
+  background: orange;
+  border: none;
+  cursor: pointer;
+}
+
+
+  p {
+    font-size: 2rem;
+  margin: 30px 0;
+  font-weight: bold;     /* text मोटा */
+  color: rgb(22, 3, 31);            /* text color */
+}
+
+li {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+/*signup page*/
+/* Full page center */
+.signup-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+/* Form box */
+.signup-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.signup-form h2 {
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button */
+.signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-form button:hover {
+  background-color: #45a049;
+}
